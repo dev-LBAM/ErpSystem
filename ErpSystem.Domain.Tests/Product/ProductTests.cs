@@ -32,7 +32,6 @@ namespace ErpSystem.Domain.Tests.Product
             ));
         }
 
-
         [Theory]
         [InlineData(-1)]
         [InlineData(0)]

@@ -1,14 +1,15 @@
 ﻿using ErpSystem.Domain.Catalog;
 using ErpSystem.Domain.Product.Lots;
+using System.Diagnostics.CodeAnalysis;
 
 namespace ErpSystem.Domain.Product;
 
 public class Product
 {
     public Guid Id { get; private set; }
-    public string Sku { get; private set; }
-    public string Name { get; private set; }
-    public string Description { get; private set; }
+    public required string Sku { get; init; }
+    public required string Name { get; init; }
+    public required string Description { get;  init; }
     public decimal Price { get; private set; }
     public Guid BrandId { get; set; }
     public Guid CategoryId { get; set; }
@@ -18,6 +19,7 @@ public class Product
     public List<Lot> Lots { get; set; } = new List<Lot>();
     private Product() { }
 
+    [SetsRequiredMembers]
     public Product(string sku, string name, string description, decimal price, Guid brandId, Guid categoryId)
     {
         if (string.IsNullOrWhiteSpace(sku))
@@ -69,8 +71,6 @@ public class Product
         {
             throw new ArgumentException("Category ID cannot be empty.", nameof(categoryId));
         }
-        Name = name;
-        Description = description;
         BrandId = brandId;
         CategoryId = categoryId;
     }

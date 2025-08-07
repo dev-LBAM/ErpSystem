@@ -11,17 +11,20 @@ namespace ErpSystem.Application.Tests.Features
     {
         public class when_creating_a_valid_product
         {
-            // Arrange //
-            var mockProductRepository = new Mock<IProductRepository>();
-            var productService = new ProductService(mockProductRepository.Object);
-            var product = new Product(
-                sku: "PROD-SKU-001",
-                name: "Product Test",
-                description: "Description test ",
-                price: 1500m,
-                brandId: Guid.NewGuid(),
-                categoryId: Guid.NewGuid()
-            );
+            [Fact]
+            public async Task should_call_repository_addasync_once()
+            {
+                // Arrange
+                var mockProductRepository = new Mock<IProductRepository>();
+                var productService = new ProductService(mockProductRepository.Object);
+                var product = new Product(
+                    sku: "PROD-SKU-001",
+                    name: "Product Test",
+                    description: "Description test",
+                    price: 1500m,
+                    brandId: Guid.NewGuid(),
+                    categoryId: Guid.NewGuid()
+                );
 
                 // Act
                 await productService.Create(product);
