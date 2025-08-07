@@ -28,7 +28,11 @@ public class Product
         {
             throw new ArgumentException("Name cannot be null or empty.", nameof(name));
         }
-        if (price < 0)
+        if (string.IsNullOrWhiteSpace(description))
+        {
+            throw new ArgumentException("Description cannot be null or empty.", nameof(description));
+        }
+        if (price <= 0)
         {
             throw new ArgumentOutOfRangeException(nameof(price), "Price cannot be negative.");
         }
@@ -73,7 +77,7 @@ public class Product
 
     public void UpdatePrice(decimal newPrice)
     {
-        if (newPrice < 0)
+        if (newPrice <= 0)
         {
             throw new ArgumentOutOfRangeException(nameof(newPrice), "Price cannot be negative.");
         }

@@ -5,7 +5,11 @@ public class Brand
     public Guid Id { get; private set; }
     public string Name { get; private set; }
 
-    private Brand() { }
+    private Brand()
+    {
+        Id = Guid.Empty;
+        Name = string.Empty;
+    }
 
     public Brand(string name)
     {

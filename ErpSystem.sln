@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpSystem.Infrastructure", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpSystem.Api", "ErpSystem.API\ErpSystem.Api.csproj", "{DBE8D789-6172-456D-81C8-77A0C13B71A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpSystem.Application.Tests", "ErpSystem.Application.Tests\ErpSystem.Application.Tests.csproj", "{2D84FB69-084F-4DCC-B308-0B68825C99BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ErpSystem.Domain.Tests", "ErpSystem.Domain.Tests\ErpSystem.Domain.Tests.csproj", "{92DE874D-6B17-468E-A738-B384B2C82753}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{DBE8D789-6172-456D-81C8-77A0C13B71A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBE8D789-6172-456D-81C8-77A0C13B71A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBE8D789-6172-456D-81C8-77A0C13B71A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D84FB69-084F-4DCC-B308-0B68825C99BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D84FB69-084F-4DCC-B308-0B68825C99BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D84FB69-084F-4DCC-B308-0B68825C99BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D84FB69-084F-4DCC-B308-0B68825C99BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92DE874D-6B17-468E-A738-B384B2C82753}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92DE874D-6B17-468E-A738-B384B2C82753}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92DE874D-6B17-468E-A738-B384B2C82753}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92DE874D-6B17-468E-A738-B384B2C82753}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
